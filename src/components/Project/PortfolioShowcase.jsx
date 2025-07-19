@@ -13,7 +13,7 @@ const PortfolioShowcase = () => {
 			id: 1,
 			title: "Soniverse Collaborative IDE",
 			description: "Soniverse is a full-featured collaborative IDE and code editor. Includes offline desktop app and real-time browser version with voice chat, compiler, AI tools, live preview, and whiteboard.",
-			image: "/images/soniverse.png",
+			image: "/Image/soniverse.png",
 			tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
 			date: "2025",
 			category: ["Desktop Application, ", " Web Application"],
