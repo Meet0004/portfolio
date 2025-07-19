@@ -147,8 +147,8 @@ const MobilePortfolioShowcase = () => {
 			tech: ["React", "Tailwind CSS", "JavaScript"],
 			date: "2025",
 			category: "",
-			liveUrl: "https://password-generator-liart-eight.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Password-Generator",
+			liveUrl: "https://portfolio-fbmicbks6-meet0004s-projects.vercel.app/",
+			githubUrl: "https://github.com/Meet0004/portfolio",
 			features: [
 				"All-in-one portfolio showcasing my projects, skills, and contact information.",
 				"Responsive design for optimal viewing on all devices.",
