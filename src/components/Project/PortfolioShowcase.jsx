@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { ChevronUp, ChevronRight} from 'lucide-react';
 import PortfolioHeader from './PortfolioHeader';
-import soniverseImg from '/assets/CC.png';
+
 
 const PortfolioShowcase = () => {
 	const [activeProject, setActiveProject] = useState(0);
@@ -15,7 +15,7 @@ const PortfolioShowcase = () => {
 			id: 1,
 			title: "Soniverse Collaborative IDE",
 			description: "Soniverse is a full-featured collaborative IDE and code editor. Includes offline desktop app and real-time browser version with voice chat, compiler, AI tools, live preview, and whiteboard.",
-			image: '/assets/CC.png',
+			image: '/assets/soniverse.png',
 			tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
 			date: "2025",
 			category: ["Desktop Application, ", " Web Application"],
@@ -36,7 +36,7 @@ const PortfolioShowcase = () => {
 			id: 2,
 			title: " Typing Speed Tester ",
 			description: "Java based Application - Developed app where users can test their typing speed and measure in wpm.",
-			image: "./src/assets/TSM.png",
+			image: "/assets/TSM.png",
 			tech: ["Java", "JavaFX"],
 			date: "2025",
 			category: "Desktop Application",
@@ -55,7 +55,7 @@ const PortfolioShowcase = () => {
 			id: 3,
 			title: "Loan Management System",
 			description: "This project provides essential features for managing multiple loans, user authentication, and EMI calculations.",
-			image: "./src/assets/LMSS.png",
+			image: "/assets/LMSS.png",
 			tech: ["JavaScript", "Node.js", "Express", "MongoDB"],
 			date: "2024",
 			category: "Web Application",
@@ -74,7 +74,7 @@ const PortfolioShowcase = () => {
 			id: 4,
 			title: "AtmosView - Modern Weather App",
 			description: "AtmosView is a sleek, modern weather application that provides accurate forecasts with beautiful visuals. It's designed to be intuitive while offering all the weather details you need at a glance.",
-			image: "./src/assets/Atmosview.png",
+			image: "/assets/Atmosview.png",
 			tech: ["Css", "JavaScript", "Weather API"],
 			date: "2025",
 			category: "Web Application",
@@ -93,7 +93,7 @@ const PortfolioShowcase = () => {
 			id: 5,
 			title: "Encryptify - Secure Data Encryption",
 			description: "Encrypttify is a powerful encryption tool that applies multi-layered encryption techniques like AES, DES, Blowfish, and Twofish to secure your keys and data",
-			image: "./src/assets/Encryptify.png",
+			image: "/assets/Encryptify.png",
 			tech: ["JavaScript", "Node.js", "Crypto API"],
 			date: "2024",
 			category: "",
@@ -110,7 +110,7 @@ const PortfolioShowcase = () => {
 			id: 6,
 			title: "Currency Converter - Real-Time Exchange Rates",
 			description: "This Currency Converter allows users to convert between global currencies in real-time using live exchange rate data from an external API.",
-			image: "./src/assets/CC.png",
+			image: "/assets/CC.png",
 			tech: ["HTML", "CSS", "JavaScript"],
 			date: "2024",
 			category: "",
@@ -126,7 +126,7 @@ const PortfolioShowcase = () => {
 			id: 7,
 			title: "Random Password Generator",
 			description: "This project generates secure 10-character random passwords including uppercase, lowercase, numbers, and symbols, with clipboard support.",
-			image: "./src/assets/PG.png",
+			image: "/assets/PG.png",
 			tech: ["HTML", "CSS", "JavaScript"],
 			date: "2024",
 			category: "",
@@ -143,7 +143,7 @@ const PortfolioShowcase = () => {
 			id: 8,
 			title: "Portfolio",
 			description: "Project that is front of you",
-			image: "./src/assets/portfolio.png",
+			image: "/assets/portfolio.png",
 			tech: ["React", "Tailwind CSS", "JavaScript"],
 			date: "2025",
 			category: "",
