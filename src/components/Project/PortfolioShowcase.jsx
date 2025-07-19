@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { ChevronUp, ChevronRight} from 'lucide-react';
 import PortfolioHeader from './PortfolioHeader';
-import soniverseImg from '../../assets/soniverse.png';
+import soniverseImg from '/assets/CC.png';
 
 const PortfolioShowcase = () => {
 	const [activeProject, setActiveProject] = useState(0);
