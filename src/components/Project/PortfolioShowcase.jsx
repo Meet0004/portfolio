@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { ChevronUp, ChevronRight} from 'lucide-react';
 import PortfolioHeader from './PortfolioHeader';
+import soniverseImg from '../../assets/soniverse.png';
+
 const PortfolioShowcase = () => {
 	const [activeProject, setActiveProject] = useState(0);
 	const scrollContainerRef = useRef(null);
@@ -13,7 +15,7 @@ const PortfolioShowcase = () => {
 			id: 1,
 			title: "Soniverse Collaborative IDE",
 			description: "Soniverse is a full-featured collaborative IDE and code editor. Includes offline desktop app and real-time browser version with voice chat, compiler, AI tools, live preview, and whiteboard.",
-			image: "../../assets/soniverse.png",
+			image: soniverseImg,
 			tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
 			date: "2025",
 			category: ["Desktop Application, ", " Web Application"],
