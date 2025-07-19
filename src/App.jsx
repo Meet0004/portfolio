@@ -162,7 +162,7 @@ const App = () => {
     // Remove loading screen completely
     const loadingTimer = setTimeout(() => {
       setIsLoading(false);
-    }, 3800); // Additional time for fade out transition
+    }, 3600); // Additional time for fade out transition
 
     return () => {
       clearTimeout(fadeTimer);
