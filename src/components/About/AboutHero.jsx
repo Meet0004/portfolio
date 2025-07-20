@@ -3,7 +3,7 @@ import DownloadResume from '../Footer/Resume';
 
 const AboutHero = () => (
   <div className="text-center mb-15" >
-    <h1 className="text-6xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue to-blue-400 bg-clip-text text-transparent">
+    <h1 className="text-6xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
       About Me
     </h1>
     <div className="inline-block p-1 bg-gradient-to-r from-purple-500 to-blue-400 rounded-full mb-6">
