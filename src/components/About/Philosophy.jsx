@@ -4,7 +4,7 @@ const Philosophy = () => (
   <div className="text-center">
     <div className="group relative bg-gradient-to-r from-[#020618] to-[#050235] rounded-3xl p-12 border border-purple-500/30 overflow-hidden hover:border-purple-500/50 transition-all duration-300">
 
-      <h2 className="p-1 text-4xl font-bold mb-8 bg-gradient-to-r from-purple-800 to-blue-400 bg-clip-text text-transparent">
+      <h2 className="p-1 text-4xl font-bold mb-8 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
         My Theory
       </h2>
 
