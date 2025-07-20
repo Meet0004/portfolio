@@ -37,7 +37,7 @@ const educationData = [
 const EducationTimeline = () => {
     return (
         <div className=" mb-8">
-            <h2 className=" p-1 text-4xl font-bold text-center mb-8 bg-gradient-to-r from-purple-800 to-blue-400 bg-clip-text text-transparent">Education Journey</h2>
+            <h2 className=" p-1 text-4xl font-bold text-center mb-8 bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">Education Journey</h2>
 
             {/* Desktop Layout - Horizontal */}
             <div className="hidden md:flex items-center justify-center gap-6">
