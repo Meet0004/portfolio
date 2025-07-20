@@ -27,7 +27,7 @@ const Logoo = () => {
     if (animateOnce) {
       const timer = setTimeout(() => {
         setAnimateOnce(false);
-        // Start zoom in effect IMMEDIATELY after letter animation
+        //zoom in effect
         setZoomIn(true);
       }, 1200); // match animation duration
 
@@ -254,7 +254,7 @@ const App = () => {
   if (isLoading) {
     return (
       <div 
-        className={`loading-screen fixed inset-0 bg-black flex items-center justify-center z-[9999] ${fadeOut ? 'fade-out' : ''}`}
+        className={`loading-screen fixed inset-0 bg-[#020617] flex items-center justify-center z-[9999] ${fadeOut ? 'fade-out' : ''}`}
         style={{
           transition: 'opacity 0.8s ease-out'
         }}
