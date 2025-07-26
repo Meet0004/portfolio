@@ -70,7 +70,8 @@ const Certificates = () => {
 		if (carouselRef.current) {
 			// Responsive certificate width calculation
 			const isMobile = window.innerWidth < 768;
-			const certificateWidth = isMobile ? 300 : 370; // Adjusted for mobile
+			const isSmallMobile = window.innerWidth < 480;
+			const certificateWidth = isSmallMobile ? 320 : isMobile ? 340 : 370;
 			const scrollPosition = currentIndex * certificateWidth;
 
 			carouselRef.current.scrollTo({
@@ -160,11 +161,11 @@ const Certificates = () => {
           /* Mobile responsive styles */
           @media (max-width: 767px) {
             .mobile-cert-card {
-              width: 280px !important;
+              width: 320px !important;
             }
             
             .mobile-cert-height {
-              height: 200px !important;
+              height: 220px !important;
             }
             
             .mobile-title {
@@ -183,15 +184,23 @@ const Certificates = () => {
             .mobile-carousel-padding {
               padding: 0 1rem !important;
             }
+            
+            .mobile-image-scale {
+              transform: scale(0.9) !important;
+            }
+            
+            .mobile-image-scale.active {
+              transform: scale(0.95) !important;
+            }
           }
 
           @media (max-width: 480px) {
             .mobile-cert-card {
-              width: 260px !important;
+              width: 300px !important;
             }
             
             .mobile-cert-height {
-              height: 180px !important;
+              height: 200px !important;
             }
             
             .mobile-title {
@@ -200,6 +209,14 @@ const Certificates = () => {
             
             .mobile-padding {
               padding: 0.75rem !important;
+            }
+            
+            .mobile-image-scale {
+              transform: scale(0.85) !important;
+            }
+            
+            .mobile-image-scale.active {
+              transform: scale(0.9) !important;
             }
           }
         `}
@@ -231,7 +248,7 @@ const Certificates = () => {
 											: 'transform scale-95 opacity-70'
 									} ${isActive ? 'shimmer shimmer-active' : 'shimmer'}`}
 									style={{
-										width: '280px',
+										width: '320px',
 										boxShadow: isActive 
 											? '0 15px 30px rgba(0, 0, 0, 0.3)' 
 											: '0 8px 20px rgba(0, 0, 0, 0.2)',
@@ -240,14 +257,14 @@ const Certificates = () => {
 									onMouseEnter={() => handleMouseEnter(index)}
 									onTouchStart={() => handleMouseEnter(index)}
 								>
-									<div className="mobile-cert-height h-48 md:h-60 overflow-hidden rounded-t-2xl md:rounded-t-3xl relative z-30" 
+									<div className="mobile-cert-height h-48 md:h-60 overflow-hidden rounded-t-2xl md:rounded-t-3xl relative z-30 flex items-center justify-center" 
 									     style={{backgroundColor: '#fff'}}>
 										<img
 											src={cert.imageUrl}
 											alt={cert.title}
-											className={`w-full h-full object-contain transition-all duration-600 z-30 ${
+											className={`max-w-full max-h-full object-contain transition-all duration-600 z-30 mobile-image-scale ${
 												isActive 
-													? 'transform scale-105 md:scale-110 brightness-100' 
+													? 'transform scale-105 md:scale-110 brightness-100 active' 
 													: 'brightness-90'
 											}`}
 											style={{
