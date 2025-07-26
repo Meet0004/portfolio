@@ -9,7 +9,8 @@ import './styles/index.css';
 import PortfolioShowcase from './components/Project/PortfolioShowcase';
 import Project from './components/Project/MobilePortfolioShowcase.jsx';
 import { useMediaQuery } from 'react-responsive';
-import GsapProjects from './pages/GsapProject';
+import Certificates from './components/Certificates/Certificates.jsx';
+
 
 const Logoo = () => {
   const [animateOnce, setAnimateOnce] = useState(false);
@@ -277,6 +278,7 @@ const App = () => {
       <About />
       <Skills />
       {isMobile ? <Project /> : <PortfolioShowcase />}
+      <Certificates/>
       <Contact />
       <Footer />
     </>
