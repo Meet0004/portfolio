@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, ExternalLink, Brain, Zap } from 'lucide-react';
+import { Code, ExternalLink, Brain, Zap, Network } from 'lucide-react';
 import SkillCategory from '../components/Skills/SkillCategory';
 
 const Skills = () => {
