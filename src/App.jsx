@@ -278,7 +278,7 @@ const App = () => {
       <About />
       <Skills />
       {isMobile ? <Project /> : <PortfolioShowcase />}
-      <Certificates/>
+      {/*<Certificates/>*/}
       <Contact />
       <Footer />
     </>
