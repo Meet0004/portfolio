@@ -8,6 +8,8 @@ const MobileMenu = ({ isOpen, setIsOpen }) => {
 			<a href='#about' onClick={() => setIsOpen(false)} className="text-lg">About</a>
 			<a href='#skills' onClick={() => setIsOpen(false)} className="text-lg">Skills</a>
 			<a href='#projects' onClick={() => setIsOpen(false)} className="text-lg">Projects</a>
+			<a href='#certifications'  onClick={() => setIsOpen(false)}>Certifications</a>
+
 			<a href='#contact' onClick={() => setIsOpen(false)} className="text-lg">Contact</a>
 		</div>
 	);
