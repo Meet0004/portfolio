@@ -71,6 +71,17 @@ const Skills = () => {
 						{ name: 'WebRTC', level: 'Proficient', percent: '75%', color: 'text-green-400', gradient: 'from-green-400 to-green-500' },
 					]}
 				/>
+				<SkillCategory
+					icon={<Network className="w-6 h-6 mr-3" />}
+					title="Blockchain"
+					textColor="text-pink-300"
+					skills={[
+						{ name: 'Remix IDE', level: 'Intermediate', percent: '80%', color: 'text-green-400', gradient: 'from-green-400 to-green-500' },
+						{ name: 'Solidity', level: 'Intermediate', percent: '80%', color: 'text-green-400', gradient: 'from-green-400 to-green-500' },
+						{ name: 'Smart Contracts & Supply chain', level: 'Intermediate', percent: '60%', color: 'text-blue-400', gradient: 'from-blue-400 to-blue-500' },
+						{ name: 'Ganache', level: 'Intermediate', percent: '60%', color: 'text-blue-400', gradient: 'from-blue-400 to-blue-500' },
+				]}
+				/>
 			</div>
 		</div>
 	);
