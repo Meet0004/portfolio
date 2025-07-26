@@ -68,7 +68,9 @@ const Certificates = () => {
 	// Enhanced scroll animation
 	useEffect(() => {
 		if (carouselRef.current) {
-			const certificateWidth = 370; // 350px width + 20px gap
+			// Responsive certificate width calculation
+			const isMobile = window.innerWidth < 768;
+			const certificateWidth = isMobile ? 300 : 370; // Adjusted for mobile
 			const scrollPosition = currentIndex * certificateWidth;
 
 			carouselRef.current.scrollTo({
@@ -154,19 +156,65 @@ const Certificates = () => {
           .ripple-active {
             animation: ripple 0.6s ease-out;
           }
+
+          /* Mobile responsive styles */
+          @media (max-width: 767px) {
+            .mobile-cert-card {
+              width: 280px !important;
+            }
+            
+            .mobile-cert-height {
+              height: 200px !important;
+            }
+            
+            .mobile-title {
+              font-size: 1rem !important;
+              line-height: 1.3 !important;
+            }
+            
+            .mobile-padding {
+              padding: 1rem !important;
+            }
+            
+            .mobile-gap {
+              gap: 1rem !important;
+            }
+            
+            .mobile-carousel-padding {
+              padding: 0 1rem !important;
+            }
+          }
+
+          @media (max-width: 480px) {
+            .mobile-cert-card {
+              width: 260px !important;
+            }
+            
+            .mobile-cert-height {
+              height: 180px !important;
+            }
+            
+            .mobile-title {
+              font-size: 0.9rem !important;
+            }
+            
+            .mobile-padding {
+              padding: 0.75rem !important;
+            }
+          }
         `}
 			</style>
 
-			<div id='certifications' className="w-full max-w-full mx-auto p-8 text-center gradient-bg min-h-screen">
-				<h2  className="mt-20 mb-20 text-white text-5xl font-bold fade-in-down" 
+			<div id='certifications' className="w-full max-w-full mx-auto p-4 md:p-8 text-center gradient-bg min-h-screen">
+				<h2 className="mt-10 md:mt-20 mb-10 md:mb-20 text-white text-3xl md:text-5xl font-bold fade-in-down px-4" 
 				    style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>
 					My Certifications
 				</h2>
 
-				<div className="z-[1005] relative overflow-hidden rounded-3xl py-8 backdrop-blur-lg border border-white border-opacity-20"
+				<div className="z-[1005] relative overflow-hidden rounded-2xl md:rounded-3xl py-4 md:py-8 backdrop-blur-lg border border-white border-opacity-20 mx-2 md:mx-0"
 				     style={{background: 'rgba(255, 255, 255, 0.1)'}}>
 					<div
-						className="flex overflow-x-hidden gap-8 px-8 cursor-grab select-none transition-all duration-300"
+						className="flex overflow-x-hidden mobile-gap gap-4 md:gap-8 mobile-carousel-padding px-4 md:px-8 cursor-grab select-none transition-all duration-300"
 						style={{scrollBehavior: 'smooth'}}
 						ref={carouselRef}
 						onMouseLeave={handleMouseLeave}
@@ -177,28 +225,29 @@ const Certificates = () => {
 							return (
 								<div
 									key={cert.id}
-									className={`flex-shrink-0 w-350 bg-white rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-400 ${
+									className={`flex-shrink-0 mobile-cert-card bg-white rounded-2xl md:rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-400 ${
 										isActive 
-											? 'transform scale-100 -translate-y-2.5 opacity-100 z-10 shadow-3xl' 
+											? 'transform scale-100 -translate-y-1 md:-translate-y-2.5 opacity-100 z-10 shadow-3xl' 
 											: 'transform scale-95 opacity-70'
 									} ${isActive ? 'shimmer shimmer-active' : 'shimmer'}`}
 									style={{
-										width: '350px',
+										width: '280px',
 										boxShadow: isActive 
-											? '0 20px 40px rgba(0, 0, 0, 0.3)' 
-											: '0 10px 30px rgba(0, 0, 0, 0.2)',
+											? '0 15px 30px rgba(0, 0, 0, 0.3)' 
+											: '0 8px 20px rgba(0, 0, 0, 0.2)',
 										transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
 									}}
 									onMouseEnter={() => handleMouseEnter(index)}
+									onTouchStart={() => handleMouseEnter(index)}
 								>
-									<div className="h-60 overflow-hidden rounded-t-3xl relative z-30" 
+									<div className="mobile-cert-height h-48 md:h-60 overflow-hidden rounded-t-2xl md:rounded-t-3xl relative z-30" 
 									     style={{backgroundColor: '#fff'}}>
 										<img
 											src={cert.imageUrl}
 											alt={cert.title}
 											className={`w-full h-full object-contain transition-all duration-600 z-30 ${
 												isActive 
-													? 'transform scale-110 brightness-100' 
+													? 'transform scale-105 md:scale-110 brightness-100' 
 													: 'brightness-90'
 											}`}
 											style={{
@@ -214,13 +263,13 @@ const Certificates = () => {
 										/>
 									</div>
 
-									<div className="p-6 text-left relative bg-white">
-										<h3 className={`m-0 mb-2 text-xl font-bold transition-colors duration-300 ${
+									<div className="mobile-padding p-4 md:p-6 text-left relative bg-white">
+										<h3 className={`mobile-title m-0 mb-2 text-lg md:text-xl font-bold transition-colors duration-300 leading-tight ${
 											isActive ? 'text-[#010517]' : 'text-gray-800'
 										}`}>
 											{cert.title}
 										</h3>
-										<p className={`m-0 mb-2 font-medium transition-all duration-300 ${
+										<p className={`m-0 mb-2 text-sm md:text-base font-medium transition-all duration-300 ${
 											isActive 
 												? 'text-blue-600 transform translate-x-1' 
 												: 'text-gray-500'
@@ -234,11 +283,11 @@ const Certificates = () => {
 					</div>
 				</div>
 
-				<div className="flex justify-center gap-3 mt-8">
+				<div className="flex justify-center gap-2 md:gap-3 mt-6 md:mt-8">
 					{myCertificates.map((_, index) => (
 						<button
 							key={index}
-							className={`w-3 h-3 rounded-full border-2 border-white p-0 relative overflow-hidden transition-all duration-300 ${
+							className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full border-2 border-white p-0 relative overflow-hidden transition-all duration-300 ${
 								index === currentIndex
 									? 'bg-white transform scale-125 shadow-lg'
 									: 'bg-white bg-opacity-30'
