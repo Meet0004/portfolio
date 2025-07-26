@@ -71,6 +71,7 @@ const Skills = () => {
 						{ name: 'WebRTC', level: 'Proficient', percent: '75%', color: 'text-green-400', gradient: 'from-green-400 to-green-500' },
 					]}
 				/>
+
 				<SkillCategory
 					icon={<Network className="w-6 h-6 mr-3" />}
 					title="Blockchain"
