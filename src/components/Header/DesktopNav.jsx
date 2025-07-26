@@ -6,6 +6,7 @@ const DesktopNav = () => {
 			<a href='#about' className="text-lg nav-link">About & Education</a>
 			<a href='#skills' className="text-lg nav-link">Skills</a>
 			<a href='#projects' className="text-lg nav-link">Projects</a>
+			<a href='#certifications' className="text-lg nav-link">Certifications</a>
 			<a href='#contact' className="text-lg nav-link">Contact</a>
 		</nav>
 	);
