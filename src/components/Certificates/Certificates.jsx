@@ -29,16 +29,29 @@ const Certificates = () => {
 		},
 		{
 			id: 5,
+			title: "Career Essentials in Generative AI",
+			issuer: "Microsoft",
+			imageUrl: "/images/mm.jpeg"
+		},
+		{
+			id: 6,
 			title: "TypeScript for JavaScript Developers",
 			issuer: "LinkedIn Learning",
 			imageUrl: "/images/ts.png"
 		},
 		{
-			id: 6,
-			title: "Career Essentials in Generative AI",
-			issuer: "Microsoft",
-			imageUrl: "/images/mm.jpeg"
+			id: 7,
+			title: "FOSS Hackathon 2025",
+			issuer: "FOSS United",
+			imageUrl: "/images/foss.png"
+		},
+		{
+			id: 8,
+			title: "Felicity Hackathon 2025",
+			issuer: "IIIT Hyderabad",
+			imageUrl: "/images/felicity.png"
 		}
+		
 	];
 
 	const [currentIndex, setCurrentIndex] = useState(0);
@@ -65,17 +78,25 @@ const Certificates = () => {
 		};
 	}, [myCertificates.length, isHovered]);
 
-	// Enhanced scroll animation
+	// Enhanced scroll animation with proper centering
 	useEffect(() => {
 		if (carouselRef.current) {
+			const container = carouselRef.current;
+			const containerWidth = container.clientWidth;
+			
 			// Responsive certificate width calculation
 			const isMobile = window.innerWidth < 768;
 			const isSmallMobile = window.innerWidth < 480;
-			const certificateWidth = isSmallMobile ? 320 : isMobile ? 340 : 370;
-			const scrollPosition = currentIndex * certificateWidth;
+			const certificateWidth = isSmallMobile ? 300 : isMobile ? 320 : 340;
+			const gap = isMobile ? 16 : 16; // 1rem = 16px
+			
+			// Calculate the scroll position to center the current card
+			const totalCardWidth = certificateWidth + gap;
+			const centerOffset = (containerWidth - certificateWidth) / 2;
+			const scrollPosition = (currentIndex * totalCardWidth) - centerOffset;
 
-			carouselRef.current.scrollTo({
-				left: scrollPosition,
+			container.scrollTo({
+				left: Math.max(0, scrollPosition),
 				behavior: 'smooth'
 			});
 		}
@@ -158,6 +179,16 @@ const Certificates = () => {
             animation: ripple 0.6s ease-out;
           }
 
+          /* Custom scrollbar styling */
+          .carousel-container::-webkit-scrollbar {
+            display: none;
+          }
+          
+          .carousel-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+
           /* Mobile responsive styles */
           @media (max-width: 767px) {
             .mobile-cert-card {
@@ -182,7 +213,7 @@ const Certificates = () => {
             }
             
             .mobile-carousel-padding {
-              padding: 0 1rem !important;
+              padding: 0 2rem !important;
             }
             
             .mobile-image-scale {
@@ -211,6 +242,10 @@ const Certificates = () => {
               padding: 0.75rem !important;
             }
             
+            .mobile-carousel-padding {
+              padding: 0 1.5rem !important;
+            }
+            
             .mobile-image-scale {
               transform: scale(0.85) !important;
             }
@@ -222,17 +257,18 @@ const Certificates = () => {
         `}
 			</style>
 
-			<div id='certifications' className="w-full max-w-full mx-auto p-4 md:p-8 text-center gradient-bg min-h-screen">
-				<h2 className="mt-10 md:mt-20 mb-10 md:mb-20 text-white text-3xl md:text-5xl font-bold fade-in-down px-4" 
-				    style={{textShadow: '2px 2px 4px rgba(0,0,0,0.3)'}}>
-					My Certifications
+			<div id='certifications' className="h-fit  w-full max-w-full mx-auto p-4 md:p-8 text-center" style={{
+    backgroundImage: `linear-gradient(to bottom right, #010517, #010517, #0B1945, #010517)`
+  }}>
+				<h2 className="mt-15 md:mt-10 mb-10 md:mb-10  font-bold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent  text-4xl md:text-6xl px-0">
+					Certifications Achieved
 				</h2>
 
 				<div className="z-[1005] relative overflow-hidden rounded-2xl md:rounded-3xl py-4 md:py-8 backdrop-blur-lg border border-white border-opacity-20 mx-2 md:mx-0"
 				     style={{background: 'rgba(255, 255, 255, 0.1)'}}>
 					<div
-						className="flex overflow-x-hidden mobile-gap gap-4 md:gap-8 mobile-carousel-padding px-4 md:px-8 cursor-grab select-none transition-all duration-300"
-						style={{scrollBehavior: 'smooth'}}
+						className="carousel-container flex overflow-x-auto mobile-gap gap-4 md:gap-4 mobile-carousel-padding px-8 md:px-16 cursor-grab select-none transition-all duration-300"
+						style={{scrollBehavior: 'smooth', scrollSnapType: 'x mandatory'}}
 						ref={carouselRef}
 						onMouseLeave={handleMouseLeave}
 					>
@@ -244,11 +280,12 @@ const Certificates = () => {
 									key={cert.id}
 									className={`flex-shrink-0 mobile-cert-card bg-white rounded-2xl md:rounded-3xl shadow-2xl relative overflow-hidden transition-all duration-400 ${
 										isActive 
-											? 'transform scale-100 -translate-y-1 md:-translate-y-2.5 opacity-100 z-10 shadow-3xl' 
+											? 'transform scale-105 -translate-y-1 md:-translate-y-2.5 opacity-100 z-10 shadow-3xl' 
 											: 'transform scale-95 opacity-70'
 									} ${isActive ? 'shimmer shimmer-active' : 'shimmer'}`}
 									style={{
-										width: '320px',
+										width: window.innerWidth < 480 ? '300px' : window.innerWidth < 768 ? '320px' : '340px',
+										scrollSnapAlign: 'center',
 										boxShadow: isActive 
 											? '0 15px 30px rgba(0, 0, 0, 0.3)' 
 											: '0 8px 20px rgba(0, 0, 0, 0.2)',
