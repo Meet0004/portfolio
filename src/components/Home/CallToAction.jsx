@@ -8,7 +8,7 @@ const CallToAction = () => (
     transition={{ delay: 1 }}
   >
     <p className="text-lg md:text-xl font-medium text-white mb-4">
-      Looking for someone who:
+      If you're looking for someone who:
     </p>
     <div className="flex flex-wrap gap-2 md:gap-3 mb-6">
       <span className="px-3 md:px-4 py-2 bg-slate-800 rounded-full text-teal-300 text-sm md:text-base">
