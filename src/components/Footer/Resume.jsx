@@ -4,8 +4,8 @@ import { FaFilePdf } from 'react-icons/fa';
 const DownloadResume = ({ className = '' }) => {
   return (
     <a
-      href=".Meet G Soni-resume.pdf"
-      download="Meet G Soni-resume.pdf"
+      href=".ms.pdf"
+      download="ms.pdf"
       className={`
         flex items-center 
         bg-blue-600 hover:bg-blue-700 
