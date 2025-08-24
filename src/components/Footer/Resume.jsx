@@ -4,7 +4,7 @@ import { FaFilePdf } from 'react-icons/fa';
 const DownloadResume = ({ className = '' }) => {
   return (
     <a
-      href=".ms.pdf"
+      href="/ms.pdf"
       download="ms.pdf"
       className={`
         flex items-center 
