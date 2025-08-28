@@ -59,7 +59,7 @@ const PortfolioShowcase = () => {
 			tech: ["JavaScript", "Node.js", "Express", "MongoDB"],
 			date: "2024",
 			category: "Web Application",
-			liveUrl: "https://youtu.be/V4cnTS96nLA?si=Uau-VxPpMH-jnUQO",
+			liveUrl: "https://tinyurl.com/LoanManagementSys",
 			githubUrl: "https://github.com/Meet0004/loan-management-system",
 			features: [
 				"Multiple Loans Feature",
