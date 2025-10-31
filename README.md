@@ -11,4 +11,4 @@
 - Contact me
 - Footer
 
-Deployed on vercel
+Deployed on vercel using built-in CI/CD pipeline
