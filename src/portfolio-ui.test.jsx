@@ -4,6 +4,7 @@ import { existsSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ContactForm from './components/Contact/ContactForm';
 import ContactDetails from './components/Contact/MyThreeDetails';
+import EducationTimeline from './components/About/EducationTimeline';
 import EditorWindow from './components/Home/EditorWindow';
 import Experience from './components/Home/Experience';
 import MyData from './components/Home/MyData';
@@ -11,6 +12,15 @@ import MobilePortfolioShowcase from './components/Project/MobilePortfolioShowcas
 import PortfolioShowcase from './components/Project/PortfolioShowcase';
 
 describe('portfolio screens', () => {
+  it('renders education as a three-item milestone timeline', () => {
+    const markup = renderToStaticMarkup(<EducationTimeline />);
+
+    expect([...markup.matchAll(/class="milestone"/g)]).toHaveLength(3);
+    expect(markup).toContain('2022 — 2025');
+    expect(markup).toContain('CGPA: 8.72');
+    expect(markup).toContain('Anand Sai High School');
+  });
+
   it('renders the hero without the removed tech badges or location line', () => {
     const markup = renderToStaticMarkup(<MyData />);
 

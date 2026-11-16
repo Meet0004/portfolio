@@ -11,12 +11,12 @@ const MyThreeDetails = () => (
     <div className="contact-details-links">
       <a href="mailto:meetgssoni@gmail.com" className="contact-detail-link">
         <span className="contact-detail-icon"><Mail size={18} /></span>
-        <span><small>Email</small><strong>meetgssoni@gmail.com</strong></span>
+        <span><small>Email</small><strong>growwmeet@gmail.com</strong></span>
         <ArrowUpRight size={16} aria-hidden="true" />
       </a>
       <a href="tel:+918999999999" className="contact-detail-link">
         <span className="contact-detail-icon"><Phone size={18} /></span>
-        <span><small>Call</small><strong>+91 8999999999</strong></span>
+        <span><small>Call</small><strong>+91 8746995340</strong></span>
         <ArrowUpRight size={16} aria-hidden="true" />
       </a>
     </div>

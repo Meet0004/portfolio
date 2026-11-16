@@ -1,67 +1,66 @@
 import React from 'react';
 import { GraduationCap, BookOpen, Award } from 'lucide-react';
 
-const educationData = [
-    {
-        icon: <GraduationCap className="w-6 h-6" />,
-        level: "Bachelor's Degree",
-        institution: "Kuvempu University",
-        course: "Comp Applications",
-        year: "2022 - 2025",
-        score: 8.72,
-        scoreType: "CGPA",
-        status: "Completed"
-    },
-    {
-        icon: <BookOpen className="w-6 h-6" />,
-        level: "PUC (12th)",
-        institution: "PES University",
-        course: "ABES",
-        year: "2020 - 2022",
-        score: 92,
-        scoreType: "Percentage",
-        status: "Completed"
-    },
-    {
-        icon: <Award className="w-6 h-6" />,
-        level: "10th Grade",
-        institution: "Anand Sai High School",
-        course: "SSLC",
-        year: "2019 - 2020",
-        score: 88,
-        scoreType: "Percentage",
-        status: "Completed"
-    }
+const milestones = [
+  {
+    icon: GraduationCap,
+    year: '2022 — 2025',
+    title: "Bachelor's Degree",
+    place: 'Kuvempu University',
+    tags: ['Comp Applications', 'CGPA: 8.72'],
+  },
+  {
+    icon: BookOpen,
+    year: '2020 — 2022',
+    title: 'PUC (12th)',
+    place: 'PES University',
+    tags: ['ABES', 'Percentage: 92'],
+  },
+  {
+    icon: Award,
+    year: '2019 — 2020',
+    title: '10th Grade',
+    place: 'Anand Sai High School',
+    tags: ['SSLC', 'Percentage: 88'],
+  },
 ];
 
-const EducationTimeline = () => {
-    return (
-        <section id="about-education" className="about-education">
-            <div className="about-section-heading">
-                <span className="about-section-kicker">THE FOUNDATION</span>
-                <h2>Education <span>&amp; growth</span></h2>
-                <p>A few milestones that shaped the way I think and build.</p>
+const EducationTimeline = () => (
+  <section id="about-education" className="about-education">
+    <div className="about-section-heading">
+      <span className="about-section-kicker">THE FOUNDATION</span>
+      <h2>Education <span>&amp; growth</span></h2>
+      <p>A few milestones that shaped the way I think and build.</p>
+    </div>
+
+    <ol className="milestones">
+      {milestones.map(({ icon: Icon, year, title, place, tags }, index) => (
+        <li className="milestone" key={title}>
+          <span className="milestone-node" aria-hidden="true">
+            <Icon size={20} />
+          </span>
+
+          <div className="milestone-body">
+            <div className="milestone-meta">
+              <span className="milestone-index">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <span className="milestone-year">{year}</span>
             </div>
-            <div className="about-education-list">
-                {educationData.map((education, index) => (
-                    <article key={education.level} className="about-education-card">
-                        <div className="about-education-topline">
-                            <span className="about-education-number">0{index + 1}</span>
-                            <span className="about-education-year">{education.year}</span>
-                        </div>
-                        <span className="about-education-icon">{education.icon}</span>
-                        <h3>{education.level}</h3>
-                        <p className="about-education-institution">{education.institution}</p>
-                        <div className="about-education-meta">
-                            <span>{education.course}</span>
-                            <span>{education.scoreType}: {education.score}</span>
-                        </div>
-                        <span className="about-education-status">{education.status}</span>
-                    </article>
-                ))}
-            </div>
-        </section>
-    );
-};
+
+            <h3 className="milestone-title">{title}</h3>
+            <p className="milestone-place">{place}</p>
+
+            <ul className="milestone-tags">
+              {tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </section>
+);
 
 export default EducationTimeline;

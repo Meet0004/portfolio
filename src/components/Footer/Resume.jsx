@@ -4,8 +4,9 @@ import { FaFilePdf } from 'react-icons/fa';
 const DownloadResume = ({ className = '' }) => {
   return (
     <a
-      href="/ms.pdf"
-      download="ms.pdf"
+      href="https://drive.google.com/drive/folders/1Q3XOuMxitFrGsomImSBVH1mwT19R0cmT?usp=sharing"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`
         flex items-center 
         bg-orange-600 hover:bg-orange-700

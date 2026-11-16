@@ -12,11 +12,11 @@ const socialLinks = [
     label: 'LinkedIn',
     icon: <FaLinkedin className="text-xl" />,
   },
-  {
-    href: 'https://twitter.com/yourusername',
-    label: 'Twitter',
-    icon: <FaTwitter className="text-xl" />,
-  },
+  // {
+  //   href: 'https://twitter.com/yourusername',
+  //   label: 'Twitter',
+  //   icon: <FaTwitter className="text-xl" />,
+  // },
   {
     href: 'https://discord.gg/QqB8srq',
     label: 'Discord',
