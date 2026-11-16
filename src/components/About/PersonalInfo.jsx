@@ -9,25 +9,17 @@ const personalInfo = [
 ];
 
 const PersonalInfo = () => (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+  <section className="about-facts" aria-label="Personal details">
     {personalInfo.map((info, index) => (
-      <div key={index} className="group relative">
-        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:transform hover:scale-105 overflow-hidden">
-          <div className="flex items-center space-x-3 mb-3">
-            <div className="text-purple-400 group-hover:text-pink-400 transition-colors">
-              {info.icon}
-            </div>
-            <span className="text-gray-400 text-sm font-medium">{info.label}</span>
-          </div>
-          <p className="text-white font-semibold">{info.value}</p>
-
-          {/* Sliding Bar */}
-          <span className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#f97316] group-hover:w-full transition-all duration-300 rounded-full" />
+      <div key={index} className="about-fact-card">
+        <span className="about-fact-icon">{info.icon}</span>
+        <div>
+          <span className="about-fact-label">{info.label}</span>
+          <p className="about-fact-value">{info.value}</p>
         </div>
       </div>
-
     ))}
-  </div>
+  </section>
 );
 
 export default PersonalInfo;

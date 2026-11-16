@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Logoo from './Logoo';
-import Logo from './Logo';
 import DesktopNav from './DesktopNav';
 import MobileMenu from './MobileMenu';
 import HamburgerButton from './HamburgerButton';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -18,14 +18,17 @@ const Header = () => {
 	}, []);
 
 	return (
-		<header className={`${scrolled ? 'bg-[#0f172a]/70 backdrop-blur-md shadow-lg' : 'bg-[#0f172a]'} z-[1006] text-white px-6 py-4 sticky top-0 transition-all duration-300`}>
-			<div className="flex justify-between items-center max-w-7xl mx-auto">
+	<header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
+		<div className="site-header-inner">
 				<Logoo />
 				<DesktopNav />
+			<div className="site-header-actions">
+				<ThemeToggle />
 				<HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
 			</div>
-			<MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-		</header>
+		</div>
+		<MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+	</header>
 	);
 };
 

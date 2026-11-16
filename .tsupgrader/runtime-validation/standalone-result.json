@@ -1,0 +1,113 @@
+{
+  "planHash": "0f5e437b93e4d3341b4baa36b710624cdc1e86a875d839d2340d15112ff293ec",
+  "phase": "standalone",
+  "recordedAtUtc": "2026-11-15T15:52:19.5563510Z",
+  "retryCount": 2,
+  "resetBaseline": false,
+  "complete": true,
+  "result": {
+    "setupSucceeded": true,
+    "setupDurationMs": 7659,
+    "setupFailureOutput": null,
+    "assertions": [
+      {
+        "name": "production-build",
+        "kind": "process",
+        "verificationMethod": "exit-code",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E portfolio@0.0.0 build\r\n\u003E vite build\r\n\r\n\u001B[36mvite v7.0.4 \u001B[32mbuilding for production...\u001B[36m\u001B[39m\r\ntransforming...\r\n\u001B[32m\u2713\u001B[39m 1716 modules transformed.\r\nrendering chunks...\r\ncomputing gzip size...\r\n\u001B[2mdist/\u001B[22m\u001B[32mindex.html                 \u001B[39m\u001B[1m\u001B[2m  1.08 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip:  0.57 kB\u001B[22m\r\n\u001B[2mdist/\u001B[22m\u001B[35massets/index-MBvd_ODL.css  \u001B[39m\u001B[1m\u001B[2m117.50 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip: 21.21 kB\u001B[22m\r\n\u001B[2mdist/\u001B[22m\u001B[36massets/index-a8BEhsdr.js   \u001B[39m\u001B[1m\u001B[2m302.53 kB\u001B[22m\u001B[1m\u001B[22m\u001B[2m \u2502 gzip: 95.25 kB\u001B[22m\r\n\u001B[32m\u2713 built in 4.27s\u001B[39m\r\n",
+        "durationMs": 5780
+      },
+      {
+        "name": "tests-pass",
+        "kind": "process",
+        "verificationMethod": "test-results",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": 0,
+        "outputSample": "\r\n\u003E portfolio@0.0.0 test\r\n\u003E vitest run\r\n\r\n\r\n RUN  v4.1.12 C:/Users/Meet Soni/OneDrive/Desktop/portfolio\r\n\r\n\r\n Test Files  1 passed (1)\r\n      Tests  6 passed (6)\r\n   Start at  21:22:17\r\n   Duration  619ms (transform 167ms, setup 0ms, import 358ms, tests 42ms, environment 0ms)\r\n\r\n",
+        "durationMs": 2046,
+        "testResults": {
+          "testFramework": "vitest",
+          "runnerDetectedFrom": "package_json",
+          "testsTotal": 6,
+          "testsPassed": 6,
+          "testsFailed": 0,
+          "testsSkipped": 0,
+          "parseFailed": false
+        }
+      },
+      {
+        "name": "dev-server-home-200",
+        "kind": "http-probe",
+        "verificationMethod": "http-status",
+        "passed": true,
+        "timedOut": false,
+        "skipped": false,
+        "skippedReason": null,
+        "exitCode": null,
+        "outputSample": "HTTP 200\n\u003C!doctype html\u003E\r\n\u003Chtml lang=\u0022en\u0022\u003E\r\n  \u003Chead\u003E\n    \u003Cscript type=\u0022module\u0022\u003Eimport { injectIntoGlobalHook } from \u0022/@react-refresh\u0022;\ninjectIntoGlobalHook(window);\nwindow.$RefreshReg$ = () =\u003E {};\nwindow.$RefreshSig$ = () =\u003E (type) =\u003E type;\u003C/script\u003E\n\n    \u003Cscript type=\u0022module\u0022 src=\u0022/@vite/client\u0022\u003E\u003C/script\u003E\n\r\n    \u003Cmeta charset=\u0022UTF-8\u0022 /\u003E\r\n    \u003Clink rel=\u0022icon\u0022 type=\u0022image/svg\u002Bxml\u0022 href=\u0022/images/m.png\u0022 /\u003E\r\n    \u003Cmeta name=\u0022viewport\u0022 content=\u0022width=device-width, initial-scale=1.0, viewport-fit=cover\u0022 /\u003E\r\n    \u003Cmeta name=\u0022description\u0022 content=\u0022Meet Soni is a full-stack developer building secure, scalable web applications with TypeScript and Node.js.\u0022 /\u003E\r\n    \u003Cscript\u003E\r\n      (() =\u003E {\r\n        const savedTheme = localStorage.getItem(\u0027portfolio-theme\u0027);\r\n        const systemPrefersDark = window.matchMedia(\u0027(prefers-color-scheme: dark)\u0027).matches;\r\n        const theme = savedTheme === \u0027light\u0027 || savedTheme === \u0027dark\u0027\r\n          ? savedTheme\r\n          : systemPrefersDark ? \u0027dark\u0027 : \u0027light\u0027;\r\n        document.documentElement.dataset.theme = theme;\r\n      })();\r\n    \u003C/script\u003E\r\n    \u003Ctitle\u003EMeet Soni - Portfolio\u003C/title\u003E\r\n  \u003C/head\u003E\r\n  \u003Cbody\u003E\r\n    \u003Cdiv id=\u0022root\u0022\u003E\u003C/div\u003E\r\n    \u003Cscript type=\u0022module\u0022 src=\u0022/src/main.jsx\u0022\u003E\u003C/script\u003E\r\n  \u003C/body\u003E\r\n\u003C/html\u003E\r\n\n--- server output ---\n\r\n\u003E portfolio@0.0.0 dev\r\n\u003E vite --host 127.0.0.1 --port 4175\r\n\r\n\r\n  \u001B[32m\u001B[1mVITE\u001B[22m v7.0.4\u001B[39m  \u001B[2mready in \u001B[0m\u001B[1m624\u001B[22m\u001B[2m\u001B[0m ms\u001B[22m\r\n\r\n  \u001B[32m\u279C\u001B[39m  \u001B[1mLocal\u001B[22m:   \u001B[36mhttp://127.0.0.1:\u001B[1m4175\u001B[22m/\u001B[39m\r\n",
+        "durationMs": 1594
+      }
+    ],
+    "executions": [
+      {
+        "source": "setup[0]",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "ci"
+        ],
+        "cwd": "C:\\Users\\Meet Soni\\OneDrive\\Desktop\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "production-build",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "build"
+        ],
+        "cwd": "C:\\Users\\Meet Soni\\OneDrive\\Desktop\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "tests-pass",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "test"
+        ],
+        "cwd": "C:\\Users\\Meet Soni\\OneDrive\\Desktop\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      },
+      {
+        "source": "dev-server-home-200",
+        "resolvedExecutable": "C:\\Program Files\\nodejs\\npm.CMD",
+        "args": [
+          "run",
+          "dev",
+          "--",
+          "--host",
+          "127.0.0.1",
+          "--port",
+          "4175"
+        ],
+        "cwd": "C:\\Users\\Meet Soni\\OneDrive\\Desktop\\portfolio",
+        "env": {},
+        "prependPath": [],
+        "platform": "win32"
+      }
+    ]
+  }
+}
