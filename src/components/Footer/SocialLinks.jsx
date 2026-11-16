@@ -25,20 +25,19 @@ const socialLinks = [
 ];
 
 const SocialLinks = () => (
-  <div className="flex space-x-4">
+  <nav className="flex flex-wrap gap-3" aria-label="Social links">
     {socialLinks.map(({ href, label, icon }) => (
       <a
         key={label}
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-300 hover:text-white transition"
-        aria-label={label}
+        className="text-gray-300 hover:text-white transition social-link"
       >
         {icon}
       </a>
     ))}
-  </div>
+  </nav>
 );
 
 export default SocialLinks;

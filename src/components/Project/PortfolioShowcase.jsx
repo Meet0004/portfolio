@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import { ChevronUp, ChevronRight} from 'lucide-react';
 import PortfolioHeader from './PortfolioHeader';
+import collaborativeCodeEditorImage from '../../assets/CollaborativeCodeEditor.jpeg';
+import oneboxImage from '../../assets/onebox.png';
 
 
 const PortfolioShowcase = () => {
@@ -9,18 +11,17 @@ const PortfolioShowcase = () => {
 	const scrollContainerRef = useRef(null);
 	const imageRefs = useRef([]);
 
-	// Sample project data - replace with your actual projects
 	const projects = [
 		{
 			id: 1,
 			title: "Soniverse Collaborative IDE",
 			description: "Soniverse is a full-featured collaborative IDE and code editor. Includes offline desktop app and real-time browser version with voice chat, compiler, AI tools, live preview, and whiteboard.",
-			image: '/assets/soniverse.png',
-			tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
+			image: collaborativeCodeEditorImage,
+			tech: ["JavaScript", "React", "Node.js", "Express", "Socket.IO" ,"Groq SDK", "Multer "],
 			date: "2025",
 			category: ["Desktop Application, ", " Web Application"],
 			liveUrl: "https://landing-page-olive-iota.vercel.app/",
-			githubUrl: "#",
+			githubUrl: "https://github.com/Meet0004/soniverse-2.4.0",
 			features: [
 				"Offline version with desktop app",
 				"Multi user room collaboration",
@@ -34,21 +35,19 @@ const PortfolioShowcase = () => {
 		},
 		{
 			id: 2,
-			title: " Typing Speed Tester ",
-			description: "Java based Application - Developed app where users can test their typing speed and measure in wpm.",
-			image: "/assets/TSM.png",
-			tech: ["Java", "JavaFX"],
-			date: "2025",
-			category: "Desktop Application",
-			liveUrl: "https://typing-speed-tester-website.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Typing-Speed-Tester",
+			title: "AI-Powered Email Management System",
+			description: "A real-time email synchronization system for multiple Gmail accounts using IMAP IDLE, Elasticsearch search, and AI-assisted workflows.",
+			image: oneboxImage,
+			tech: ["React.js", "TypeScript", "Node.js", "Elasticsearch", "Docker", "IMAP IDLE", "Vector DB / LLMs"],
+			date: "Oct 2025",
+			category: "Backend Engineering",
+			liveUrl: "https://www.youtube.com/watch?v=fs5SkBAUXMQ",
+			githubUrl: "https://github.com/Meet0004/email-sync-system-intern",
 			features: [
-				"Real-time WPM & accuracy tracking",
-				"Multiple difficulty levels (Beginner to Expert)",
-				"Progress tracking with XP & leveling system",
-				"Interactive UI with themes & customization",
-				"Test history & leaderboard for performance analysis",
-				"Achievements & streaks to keep users motivated "
+				"Real-time synchronization across multiple Gmail accounts using persistent IMAP IDLE connections.",
+				"Elasticsearch-based email indexing and filtering with a Dockerized setup for faster search and management.",
+				"AI-powered email categorization and smart-reply suggestions using vector database and LLM workflows.",
+				"Backend workflows designed to handle persistent connections and large-scale email data efficiently."
 			]
 		},
 		{
@@ -72,91 +71,39 @@ const PortfolioShowcase = () => {
 		},
 		{
 			id: 4,
-			title: "AtmosView - Modern Weather App",
-			description: "AtmosView is a sleek, modern weather application that provides accurate forecasts with beautiful visuals. It's designed to be intuitive while offering all the weather details you need at a glance.",
-			image: "/assets/Atmosview.png",
-			tech: ["Css", "JavaScript", "Weather API"],
+			title: "Typing Speed Tester",
+			description: "Java based Application - Developed app where users can test their typing speed and measure in wpm.",
+			image: "/assets/TSMM.png",
+			tech: ["Java", "JavaFX"],
+			date: "2025",
+			category: "Desktop Application",
+			liveUrl: "https://typing-speed-tester-website.vercel.app/",
+			githubUrl: "https://github.com/Meet0004/Typing-Speed-Tester",
+			features: [
+				"Real-time WPM & accuracy tracking",
+				"Multiple difficulty levels (Beginner to Expert)",
+				"Progress tracking with XP & leveling system",
+				"Interactive UI with themes & customization",
+				"Test history & leaderboard for performance analysis",
+				"Achievements & streaks to keep users motivated "
+			]
+		},
+		{
+			id: 5,
+			title: "Personal Portfolio",
+			description: "A responsive portfolio built to share my experience, technical skills, and selected projects in one place.",
+			image: "/assets/portfolio.png",
+			tech: ["React", "JavaScript", "Tailwind CSS"],
 			date: "2025",
 			category: "Web Application",
-			liveUrl: "https://weather-app-xi-sable-94.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/weather-app",
-			features: [
-				"Real-time weather data for any location worldwide",
-				"5-day forecast with daily high/low temperatures",
-				"12-hour hourly forecast to plan your day",
-				"Detailed weather stats (humidity, wind, pressure, feels-like)",
-				"Fully responsive - works on all devices",
-			]
-		},
-		
-		{
-			id: 5,
-			title: "Encryptify - Secure Data Encryption",
-			description: "Encrypttify is a powerful encryption tool that applies multi-layered encryption techniques like AES, DES, Blowfish, and Twofish to secure your keys and data",
-			image: "/assets/Encryptify.png",
-			tech: ["JavaScript", "Node.js", "Crypto API"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://encrypytify.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Encrypytify",
-			features: [
-				"Multi-Level Encryption Modes",
-				"Custom Encryption Workflows",
-				"User-Friendly Dark Mode Interface",
-				"One-Way Hash Encryption (Hard Mode)",
-			]
-		},
-		{
-			id: 6,
-			title: "Currency Converter - Real-Time Exchange Rates",
-			description: "This Currency Converter allows users to convert between global currencies in real-time using live exchange rate data from an external API.",
-			image: "/assets/CC.png",
-			tech: ["HTML", "CSS", "JavaScript"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://m-currency-converter.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/M_currency_converter",
-			features: [
-				"Real-Time Currency Conversion",
-				"Clean and Intuitive Interface",
-				"Supports Global Currencies",
-				"Error Handling for Invalid Inputs"
-			]
-		}, {
-			id: 7,
-			title: "Random Password Generator",
-			description: "This project generates secure 10-character random passwords including uppercase, lowercase, numbers, and symbols, with clipboard support.",
-			image: "/assets/PG.png",
-			tech: ["HTML", "CSS", "JavaScript"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://password-generator-liart-eight.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Password-Generator",
-			features: [
-				"Generates 10-Character Secure Passwords",
-				"Includes Uppercase, Lowercase, Numbers, and Symbols",
-				"Ensures One Character from Each Category",
-				"Clipboard API Support for Copying Passwords"
-			]
-		},
- {
-			id: 8,
-			title: "Portfolio",
-			description: "Project that is front of you",
-			image: "/assets/portfolio.png",
-			tech: ["React", "Tailwind CSS", "JavaScript"],
-			date: "2025",
-			category: "",
 			liveUrl: "https://portfolio-fbmicbks6-meet0004s-projects.vercel.app/",
 			githubUrl: "https://github.com/Meet0004/portfolio",
 			features: [
-				"All-in-one portfolio showcasing my projects, skills, and contact information.",
-				"Responsive design for optimal viewing on all devices.",
-				"Includes sections for projects, skills, contact form, and social links.",
-
+				"Responsive layouts for desktop and mobile.",
+				"Dedicated sections for experience, skills, projects, and contact.",
+				"Light and dark themes with accessible navigation.",
 			]
 		},
-
 	];
 
 	// Handle scroll events to determine active project
@@ -215,10 +162,10 @@ const PortfolioShowcase = () => {
 	const currentProject = projects[activeProject];
 
 	return (
-		<div className="min-h-screen  text-white overflow-hidden">
+		<div className="project-showcase min-h-screen overflow-hidden">
 			{/* Background Effects */}
-			<div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
-			<div className="fixed inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]"></div>
+			<div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
+			<div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))]"></div>
 			<PortfolioHeader />
 			<div className="relative flex h-screen">
 				{/* Left Panel - Project Details */}
@@ -302,6 +249,8 @@ const PortfolioShowcase = () => {
 							<div className="flex gap-4 pt-0">
 								<a
 									href={currentProject.liveUrl}
+									target="_blank"
+									rel="noopener noreferrer"
 									className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 font-medium"
 								>
 									<ExternalLink size={18} />
@@ -309,6 +258,8 @@ const PortfolioShowcase = () => {
 								</a>
 								<a
 									href={currentProject.githubUrl}
+									target="_blank"
+									rel="noopener noreferrer"
 									className="flex items-center gap-2 px-6 py-3 border border-gray-600 rounded-lg hover:bg-gray-800/50 transition-all duration-300 font-medium"
 								>
 									<Github size={18} />
@@ -352,9 +303,10 @@ const PortfolioShowcase = () => {
 											<img
 												src={project.image}
 												alt={project.title}
-												className="w-full h-96 object-fit: contain object-position: center; transition-transform duration-700"
+												loading="lazy"
+												className="project-preview-image w-full h-96 object-contain object-center transition-transform duration-700"
 											/>
-											<div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+											<div className="project-image-overlay project-image-overlay-bottom"></div>
 
 											{/* Hover Overlay */}
 											<div className="absolute inset-0 opacity-0  transition-opacity duration-300 flex items-center justify-center">
@@ -383,32 +335,6 @@ const PortfolioShowcase = () => {
 				</div>
 			</div>
 
-			<style jsx>{`
-        .scrollbar-hide {
-          -webkit-scrollbar: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        @keyframes slide-up {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out;
-        }
-        
-        .animate-slide-up {
-          animation: slide-up 0.5s ease-out;
-        }
-      `}</style>
 		</div>
 	);
 };

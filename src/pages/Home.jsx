@@ -1,16 +1,18 @@
-import React from 'react'
+import React from 'react';
 import CodeEditor from '../components/Home/CodeEditor';
 import MyData from '../components/Home/MyData';
-import '../styles/index.css'; // Ensure styles are imported
-import { motion } from 'framer-motion';
+import '../styles/index.css';
+
 const Home = () => {
   return (
-    <div id='logo' className=' px-4 md:px-10 h-fit py-6 md:py-11 flex flex-col lg:flex-row gap-5 items-center justify-center  bg-slate-950 text-white'>
+    <section
+      id='logo'
+      className='home-hero mx-auto w-full max-w-[1120px] px-4 md:px-0 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start'
+    >
       <MyData />
-	  <CodeEditor />
-    
-    </div>
-  )
-}
+      <CodeEditor />
+    </section>
+  );
+};
 
-export default Home
+export default Home;

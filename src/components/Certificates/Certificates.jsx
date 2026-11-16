@@ -257,10 +257,8 @@ const Certificates = () => {
         `}
 			</style>
 
-			<div id='certifications' className="h-fit  w-full max-w-full mx-auto p-4 md:p-8 text-center" style={{
-    backgroundImage: `linear-gradient(to bottom right, #010517, #010517, #0B1945, #010517)`
-  }}>
-				<h2 className="mt-15 md:mt-10 mb-10 md:mb-10  font-bold bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent  text-4xl md:text-6xl px-0">
+            <div id='certifications' className="h-fit w-full max-w-full mx-auto p-4 md:p-8 text-center">
+                <h2 className="mt-15 md:mt-10 mb-10 md:mb-10 font-bold text-stone-900 text-4xl md:text-6xl px-0">
 					Certifications Achieved
 				</h2>
 

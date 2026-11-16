@@ -1,21 +1,21 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, ExternalLink, Github, Calendar, Tag, Menu, X } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight, ExternalLink, Github, Calendar, Tag } from 'lucide-react';
 import PortfolioHeader from './PortfolioHeader';
+import collaborativeCodeEditorImage from '../../assets/CollaborativeCodeEditor.jpeg';
+import oneboxImage from '../../assets/onebox.png';
 
 const MobilePortfolioShowcase = () => {
 	const [activeProject, setActiveProject] = useState(0);
-	const [showMenu, setShowMenu] = useState(false);
 	const [touchStart, setTouchStart] = useState(null);
 	const [touchEnd, setTouchEnd] = useState(null);
 	const imageRef = useRef(null);
 
-	// Sample project data
 	const projects = [
 		{
 			id: 1,
 			title: "Soniverse Collaborative IDE",
 			description: "Soniverse is a full-featured collaborative IDE and code editor. Includes offline desktop app and real-time browser version with voice chat, compiler, AI tools, live preview, and whiteboard.",
-			image: "/assets/soniverse.png",
+			image: collaborativeCodeEditorImage,
 			tech: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Express", "MongoDB"],
 			date: "2025",
 			category: ["Desktop Application, ", " Web Application"],
@@ -34,21 +34,19 @@ const MobilePortfolioShowcase = () => {
 		},
 		{
 			id: 2,
-			title: " Typing Speed Tester ",
-			description: "Java based Application - Developed app where users can test their typing speed and measure in wpm.",
-			image: "/assets/TSMM.png",
-			tech: ["Java", "JavaFX"],
-			date: "2025",
-			category: "Desktop Application",
-			liveUrl: "https://typing-speed-tester-website.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Typing-Speed-Tester",
+			title: "AI-Powered Email Management System",
+			description: "A real-time email synchronization system for multiple Gmail accounts using IMAP IDLE, Elasticsearch search, and AI-assisted workflows.",
+			image: oneboxImage,
+			tech: ["React.js", "TypeScript", "Node.js", "Elasticsearch", "Docker", "IMAP IDLE", "Vector DB / LLMs"],
+			date: "Oct 2025",
+			category: "Backend Engineering",
+			liveUrl: "https://www.youtube.com/watch?v=fs5SkBAUXMQ",
+			githubUrl: "https://github.com/Meet0004/email-sync-system-intern",
 			features: [
-				"Real-time WPM & accuracy tracking",
-				"Multiple difficulty levels (Beginner to Expert)",
-				"Progress tracking with XP & leveling system",
-				"Interactive UI with themes & customization",
-				"Test history & leaderboard for performance analysis",
-				"Achievements & streaks to keep users motivated "
+				"Real-time synchronization across multiple Gmail accounts using persistent IMAP IDLE connections.",
+				"Elasticsearch-based email indexing and filtering with a Dockerized setup for faster search and management.",
+				"AI-powered email categorization and smart-reply suggestions using vector database and LLM workflows.",
+				"Backend workflows designed to handle persistent connections and large-scale email data efficiently."
 			]
 		},
 		{
@@ -72,90 +70,39 @@ const MobilePortfolioShowcase = () => {
 		},
 		{
 			id: 4,
-			title: "AtmosView - Modern Weather App",
-			description: "AtmosView is a sleek, modern weather application that provides accurate forecasts with beautiful visuals. It's designed to be intuitive while offering all the weather details you need at a glance.",
-			image: "/assets/AtmosviewM.png",
-			tech: ["Css", "JavaScript", "Weather API"],
+			title: "Typing Speed Tester",
+			description: "Java based Application - Developed app where users can test their typing speed and measure in wpm.",
+			image: "/assets/TSMM.png",
+			tech: ["Java", "JavaFX"],
 			date: "2025",
-			category: "Web Application",
-			liveUrl: "https://weather-app-xi-sable-94.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/weather-app",
+			category: "Desktop Application",
+			liveUrl: "https://typing-speed-tester-website.vercel.app/",
+			githubUrl: "https://github.com/Meet0004/Typing-Speed-Tester",
 			features: [
-				"Real-time weather data for any location worldwide",
-				"5-day forecast with daily high/low temperatures",
-				"12-hour hourly forecast to plan your day",
-				"Detailed weather stats (humidity, wind, pressure, feels-like)",
-				"Fully responsive - works on all devices",
+				"Real-time WPM & accuracy tracking",
+				"Multiple difficulty levels (Beginner to Expert)",
+				"Progress tracking with XP & leveling system",
+				"Interactive UI with themes & customization",
+				"Test history & leaderboard for performance analysis",
+				"Achievements & streaks to keep users motivated "
 			]
 		},
 		{
 			id: 5,
-			title: "Encryptify - Secure Data Encryption",
-			description: "Encrypttify is a powerful encryption tool that applies multi-layered encryption techniques like AES, DES, Blowfish, and Twofish to secure your keys and data",
-			image: "/assets/Encryptify.png",
-			tech: ["JavaScript", "Node.js", "Crypto API"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://encrypytify.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Encrypytify",
-			features: [
-				"Multi-Level Encryption Modes",
-				"Custom Encryption Workflows",
-				"User-Friendly Dark Mode Interface",
-				"One-Way Hash Encryption (Hard Mode)",
-			]
-		},
-		{
-			id: 6,
-			title: "Currency Converter - Real-Time Exchange Rates",
-			description: "This Currency Converter allows users to convert between global currencies in real-time using live exchange rate data from an external API.",
-			image: "/assets/CC.png",
-			tech: ["HTML", "CSS", "JavaScript"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://m-currency-converter.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/M_currency_converter",
-			features: [
-				"Real-Time Currency Conversion",
-				"Clean and Intuitive Interface",
-				"Supports Global Currencies",
-				"Error Handling for Invalid Inputs"
-			]
-		},
-		{
-			id: 7,
-			title: "Random Password Generator",
-			description: "This project generates secure 10-character random passwords including uppercase, lowercase, numbers, and symbols, with clipboard support.",
-			image: "/assets/PG.png",
-			tech: ["HTML", "CSS", "JavaScript"],
-			date: "2024",
-			category: "",
-			liveUrl: "https://password-generator-liart-eight.vercel.app/",
-			githubUrl: "https://github.com/Meet0004/Password-Generator",
-			features: [
-				"Generates 10-Character Secure Passwords",
-				"Includes Uppercase, Lowercase, Numbers, and Symbols",
-				"Ensures One Character from Each Category",
-				"Clipboard API Support for Copying Passwords"
-			]
-		},
- {
-			id: 8,
-			title: "Portfolio",
-			description: "Project that is front of you",
+			title: "Personal Portfolio",
+			description: "A responsive portfolio built to share my experience, technical skills, and selected projects in one place.",
 			image: "/assets/portfolio.png",
-			tech: ["React", "Tailwind CSS", "JavaScript"],
+			tech: ["React", "JavaScript", "Tailwind CSS"],
 			date: "2025",
-			category: "",
+			category: "Web Application",
 			liveUrl: "https://portfolio-fbmicbks6-meet0004s-projects.vercel.app/",
 			githubUrl: "https://github.com/Meet0004/portfolio",
 			features: [
-				"All-in-one portfolio showcasing my projects, skills, and contact information.",
-				"Responsive design for optimal viewing on all devices.",
-				"Includes sections for projects, skills, contact form, and social links.",
-				"Built with React and styled using Tailwind CSS for a modern look."
+				"Responsive layouts for desktop and mobile.",
+				"Dedicated sections for experience, skills, projects, and contact.",
+				"Light and dark themes with accessible navigation.",
 			]
-		}
+		},
 	];
 
 	// Touch handling for swipe gestures
@@ -196,7 +143,7 @@ const MobilePortfolioShowcase = () => {
 	const currentProject = projects[activeProject];
 
 	return (
-		<div className="min-h-screen bg-transparent text-white overflow-x-hidden">
+		<div className="project-showcase min-h-screen overflow-x-hidden">
 			<PortfolioHeader />
 
 			{/* Swipe Indicator */}
@@ -207,7 +154,7 @@ const MobilePortfolioShowcase = () => {
 			</div>
 
 			{/* Background Effects */}
-			<div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
+			<div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
 
 			{/* Main Content */}
 			<div className="relative">
@@ -218,12 +165,12 @@ const MobilePortfolioShowcase = () => {
 					onTouchMove={onTouchMove}
 					onTouchEnd={onTouchEnd}
 				>
-					<div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/80"></div>
+					<div className="project-image-overlay project-image-overlay-bottom"></div>
 					<img
 						ref={imageRef}
 						src={currentProject.image}
 						alt={currentProject.title}
-						className="w-full h-full object-fit transition-all duration-500 z-[1007] "
+						className="project-preview-image w-full h-full object-contain transition-all duration-500 z-[1007]"
 					/>
 
 					{/* Navigation Arrows - Now loop continuously */}
@@ -288,6 +235,8 @@ const MobilePortfolioShowcase = () => {
 					<div className="flex gap-3">
 						<a
 							href={currentProject.liveUrl}
+							target="_blank"
+							rel="noopener noreferrer"
 							className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg font-medium transition-all duration-300 active:scale-95"
 						>
 							<ExternalLink size={18} />
@@ -295,6 +244,8 @@ const MobilePortfolioShowcase = () => {
 						</a>
 						<a
 							href={currentProject.githubUrl}
+							target="_blank"
+							rel="noopener noreferrer"
 							className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border border-gray-600 rounded-lg font-medium transition-all duration-300 active:scale-95"
 						>
 							<Github size={18} />

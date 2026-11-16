@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <defs>
+    <linearGradient id="background" x1="80" y1="50" x2="1090" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF8F0"/>
+      <stop offset="1" stop-color="#F2E5D8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="790" y1="152" x2="1051" y2="605" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/>
+      <stop offset="1" stop-color="#C2410C"/>
+    </linearGradient>
+    <filter id="shadow" x="125" y="106" width="950" height="620" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="18"/>
+      <feGaussianBlur stdDeviation="20"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.29 0 0 0 0 0.19 0 0 0 0 0.12 0 0 0 0.13 0"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="800" rx="38" fill="url(#background)"/>
+  <circle cx="1010" cy="142" r="152" fill="#F6C79F" fill-opacity=".26"/>
+  <circle cx="161" cy="690" r="210" fill="#F2D8C2" fill-opacity=".45"/>
+  <g filter="url(#shadow)">
+    <rect x="165" y="146" width="870" height="528" rx="24" fill="#FFFEFC"/>
+    <path d="M189 146h822a24 24 0 0 1 24 24v54H165v-54a24 24 0 0 1 24-24Z" fill="#FFF9F2"/>
+    <circle cx="198" cy="185" r="6" fill="#F17E55"/>
+    <circle cx="220" cy="185" r="6" fill="#F4BE59"/>
+    <circle cx="242" cy="185" r="6" fill="#69B98A"/>
+    <rect x="280" y="174" width="210" height="22" rx="11" fill="#F4ECE4"/>
+    <rect x="298" y="182" width="94" height="6" rx="3" fill="#C5B4A5"/>
+    <rect x="193" y="251" width="182" height="395" rx="14" fill="#FFF9F2"/>
+    <rect x="213" y="276" width="130" height="38" rx="10" fill="#FCEAD9"/>
+    <path d="M230 294h14m-7-7v14" stroke="#D96524" stroke-linecap="round" stroke-width="2"/>
+    <rect x="252" y="290" width="70" height="7" rx="3.5" fill="#C75B23"/>
+    <rect x="216" y="341" width="122" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="372" width="108" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="403" width="118" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="434" width="95" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="487" width="136" height="1" fill="#EDE3DA"/>
+    <rect x="216" y="510" width="122" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="541" width="98" height="7" rx="3.5" fill="#DDCEC1"/>
+    <rect x="216" y="572" width="114" height="7" rx="3.5" fill="#DDCEC1"/>
+    <text x="414" y="285" fill="#9A7560" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">UNIFIED INBOX</text>
+    <text x="414" y="329" fill="#30241D" font-family="Arial, sans-serif" font-size="27" font-weight="700">Mail, in sync.</text>
+    <rect x="414" y="352" width="368" height="44" rx="12" fill="#FFF9F2"/>
+    <circle cx="438" cy="374" r="7" fill="#E97A38"/>
+    <rect x="458" y="368" width="179" height="7" rx="3.5" fill="#8C7463"/>
+    <rect x="458" y="381" width="263" height="5" rx="2.5" fill="#D6C9BD"/>
+    <rect x="414" y="408" width="368" height="44" rx="12" fill="#FFFDFC"/>
+    <circle cx="438" cy="430" r="7" fill="#B6947B"/>
+    <rect x="458" y="424" width="155" height="7" rx="3.5" fill="#8C7463"/>
+    <rect x="458" y="437" width="229" height="5" rx="2.5" fill="#D6C9BD"/>
+    <rect x="414" y="464" width="368" height="44" rx="12" fill="#FFFDFC"/>
+    <circle cx="438" cy="486" r="7" fill="#B6947B"/>
+    <rect x="458" y="480" width="189" height="7" rx="3.5" fill="#8C7463"/>
+    <rect x="458" y="493" width="246" height="5" rx="2.5" fill="#D6C9BD"/>
+    <rect x="414" y="520" width="368" height="44" rx="12" fill="#FFFDFC"/>
+    <circle cx="438" cy="542" r="7" fill="#B6947B"/>
+    <rect x="458" y="536" width="141" height="7" rx="3.5" fill="#8C7463"/>
+    <rect x="458" y="549" width="217" height="5" rx="2.5" fill="#D6C9BD"/>
+    <rect x="812" y="251" width="199" height="395" rx="18" fill="#FFF8F1"/>
+    <text x="834" y="284" fill="#9A7560" font-family="Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">SMART FILTERS</text>
+    <rect x="834" y="306" width="154" height="36" rx="18" fill="#FCEAD9"/>
+    <circle cx="854" cy="324" r="5" fill="#D96524"/>
+    <rect x="867" y="321" width="82" height="6" rx="3" fill="#B75A29"/>
+    <rect x="834" y="354" width="132" height="7" rx="3.5" fill="#CBB8A8"/>
+    <rect x="834" y="374" width="151" height="7" rx="3.5" fill="#E0D3C8"/>
+    <rect x="834" y="410" width="154" height="1" fill="#E9DDD2"/>
+    <circle cx="855" cy="442" r="16" fill="url(#accent)"/>
+    <path d="M849 442h12m-6-6v12" stroke="white" stroke-linecap="round" stroke-width="2"/>
+    <text x="882" y="438" fill="#5B4536" font-family="Arial, sans-serif" font-size="11" font-weight="700">AI ASSIST</text>
+    <text x="882" y="454" fill="#9A7560" font-family="Arial, sans-serif" font-size="10">Smart replies</text>
+    <rect x="834" y="482" width="155" height="67" rx="12" fill="#FFFEFC"/>
+    <rect x="849" y="498" width="71" height="6" rx="3" fill="#B75A29"/>
+    <rect x="849" y="514" width="124" height="5" rx="2.5" fill="#DDCEC1"/>
+    <rect x="849" y="527" width="96" height="5" rx="2.5" fill="#DDCEC1"/>
+    <rect x="834" y="570" width="85" height="28" rx="14" fill="#D96524"/>
+    <text x="850" y="588" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="700">SEARCH</text>
+  </g>
+  <rect x="808" y="618" width="240" height="45" rx="22.5" fill="#FFFEFC"/>
+  <circle cx="833" cy="640" r="6" fill="#58A978"/>
+  <text x="850" y="644" fill="#655246" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">LIVE SYNC · AI SEARCH</text>
+</svg>
