@@ -25,10 +25,6 @@ const AboutHero = () => (
           Explore my journey <ArrowDownRight size={17} />
         </a>
       </div>
-      <div className="about-hero-note">
-        <span className="about-note-dot" />
-        Open to meaningful opportunities
-      </div>
     </div>
 
     <div className="about-visual" aria-label="Meet Soni monogram artwork">

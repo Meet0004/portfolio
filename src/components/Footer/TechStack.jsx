@@ -10,7 +10,7 @@ const TechStack = () => (
       <SiTailwindcss className="text-cyan-400 text-xl" title="Tailwind CSS" />
     </div>
     <p>© 2025 Meet Soni. Made with ❤️</p>
-    <p className="text-sm text-gray-400">Last updated: 20-07-2025</p>
+    <p className="text-sm text-gray-400">Last updated: 20-11-2026</p>
   </div>
 );
 

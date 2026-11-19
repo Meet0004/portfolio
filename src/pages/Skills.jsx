@@ -1,5 +1,13 @@
 import React from 'react';
 import { Code, ExternalLink, Brain, Zap } from 'lucide-react';
+import {
+	SiAmazonwebservices,
+	SiGit,
+	SiGithub,
+	SiMongodb,
+	SiSocketdotio,
+	SiWebrtc,
+} from 'react-icons/si';
 import SkillCategory from '../components/Skills/SkillCategory';
 
 const Skills = () => {
@@ -45,6 +53,8 @@ const Skills = () => {
 					skills={[
 						{ name: 'SQL', level: 'Advanced', percent: '85%', color: 'text-green-400', gradient: 'from-green-400 to-green-500' },
 						{ name: 'MongoDB', level: 'Intermediate', percent: '70%', color: 'text-blue-400', gradient: 'from-blue-400 to-blue-500' },
+						{ name: 'Redis', level: 'Intermediate', percent: '60%', color: 'text-blue-400', gradient: 'from-blue-400 to-blue-500' },
+						{ name: 'PostgreSQL', level: 'Beginner', percent: '40%', color: 'text-sky-400', gradient: 'from-sky-400 to-sky-500' },
 					]}
 				/>
 
@@ -52,8 +62,15 @@ const Skills = () => {
 					icon={<Zap className="w-6 h-6 mr-3" />}
 					title="Tools & Technologies"
 					textColor="text-orange-300"
-					displayAsTags
-					skills={['Git', 'GitHub', 'AWS', 'Socket.io', 'WebRTC']}
+					displayAsIcons
+					skills={[
+						{ name: 'Git', Icon: SiGit },
+						{ name: 'GitHub', Icon: SiGithub },
+						{ name: 'AWS', Icon: SiAmazonwebservices },
+						{ name: 'Socket.io', Icon: SiSocketdotio },
+						{ name: 'WebRTC', Icon: SiWebrtc },
+						{ name: 'MongoDB', Icon: SiMongodb },
+					]}
 				/>
 			</div>
 		</div>

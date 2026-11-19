@@ -9,16 +9,16 @@ const ContactSection = () => (
     </div>
     <div className="about-social-list">
       <a href="https://www.linkedin.com/in/meetsoni04/" target="_blank" rel="noopener noreferrer">
-        <Linkedin size={17} /><span>LinkedIn</span><ArrowUpRight size={15} />
+        <Linkedin size={20} /><span>LinkedIn</span><ArrowUpRight size={16} />
       </a>
       <a href="https://github.com/Meet0004" target="_blank" rel="noopener noreferrer">
-        <Github size={17} /><span>GitHub</span><ArrowUpRight size={15} />
+        <Github size={20} /><span>GitHub</span><ArrowUpRight size={16} />
       </a>
       <a href="https://leetcode.com/meetgsoni" target="_blank" rel="noopener noreferrer">
-        <Code size={17} /><span>LeetCode</span><ArrowUpRight size={15} />
+        <Code size={20} /><span>LeetCode</span><ArrowUpRight size={16} />
       </a>
       <a href="https://instagram.com/mr_sonx" target="_blank" rel="noopener noreferrer">
-        <Instagram size={17} /><span>Instagram</span><ArrowUpRight size={15} />
+        <Instagram size={20} /><span>Instagram</span><ArrowUpRight size={16} />
       </a>
     </div>
   </section>

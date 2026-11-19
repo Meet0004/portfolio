@@ -2,7 +2,7 @@ import React from 'react';
 import { MapPin, Calendar, University, Code } from 'lucide-react';
 
 const personalInfo = [
-  { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Shimoga, Karnataka" },
+  { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Bengaluru, Karnataka" },
   { icon: <Calendar className="w-5 h-5" />, label: "Born", value: "December 31, 2004" },
   { icon: <University className="w-5 h-5" />, label: "University", value: "Kuvempu University" },
   { icon: <Code className="w-5 h-5" />, label: "Status", value: "Available for Work" }

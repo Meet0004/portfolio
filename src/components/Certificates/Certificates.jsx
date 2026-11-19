@@ -339,24 +339,17 @@ const Certificates = () => {
 					{myCertificates.map((_, index) => (
 						<button
 							key={index}
-							className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full border-2 border-white p-0 relative overflow-hidden transition-all duration-300 ${
-								index === currentIndex
-									? 'bg-white transform scale-125 shadow-lg'
-									: 'bg-white bg-opacity-30'
-							}`}
-							style={{
-								boxShadow: index === currentIndex ? '0 0 15px rgba(255, 255, 255, 0.8)' : 'none',
-								transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-							}}
+							type="button"
+							className="certification-indicator"
 							onClick={() => handleIndicatorClick(index)}
 							aria-label={`Go to certificate ${index + 1}`}
+							aria-pressed={index === currentIndex}
 						>
-							{index === currentIndex && (
-								<div 
-									className="absolute top-1/2 left-1/2 w-0 h-0 rounded-full transform -translate-x-1/2 -translate-y-1/2 ripple-active"
-									style={{background: 'rgba(255, 255, 255, 0.6)'}}
-								/>
-							)}
+							<span className={`certification-indicator-dot${index === currentIndex ? ' is-active' : ''}`} aria-hidden="true">
+								{index === currentIndex && (
+									<span className="absolute top-1/2 left-1/2 w-0 h-0 rounded-full transform -translate-x-1/2 -translate-y-1/2 ripple-active" style={{ background: 'rgba(255, 255, 255, 0.6)' }} />
+								)}
+							</span>
 						</button>
 					))}
 				</div>

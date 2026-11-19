@@ -4,12 +4,16 @@ import { existsSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import ContactForm from './components/Contact/ContactForm';
 import ContactDetails from './components/Contact/MyThreeDetails';
+import AboutHero from './components/About/AboutHero';
 import EducationTimeline from './components/About/EducationTimeline';
 import EditorWindow from './components/Home/EditorWindow';
 import Experience from './components/Home/Experience';
 import MyData from './components/Home/MyData';
 import MobilePortfolioShowcase from './components/Project/MobilePortfolioShowcase';
+import PortfolioHeader from './components/Project/PortfolioHeader';
 import PortfolioShowcase from './components/Project/PortfolioShowcase';
+import PersonalInfo from './components/About/PersonalInfo';
+import Skills from './pages/Skills';
 
 describe('portfolio screens', () => {
   it('renders education as a three-item milestone timeline', () => {
@@ -28,6 +32,38 @@ describe('portfolio screens', () => {
     expect(markup).toContain('Meet Soni.');
     expect(markup).not.toContain('FULL-STACK DEVELOPER');
     expect(markup).not.toContain('TypeScript</span>');
+  });
+
+  it('keeps the opportunity note removed and restores the location as the first about fact', () => {
+    const markup = renderToStaticMarkup(
+      <>
+        <AboutHero />
+        <PersonalInfo />
+      </>,
+    );
+
+    expect(markup).not.toContain('Open to meaningful opportunities');
+    expect(markup).toContain('Bengaluru, Karnataka');
+    expect(markup.indexOf('Location')).toBeLessThan(markup.indexOf('Born'));
+  });
+
+  it('shows database proficiency levels and SVG logos for tools', () => {
+    const markup = renderToStaticMarkup(<Skills />);
+
+    expect(markup).toContain('Redis');
+    expect(markup).toContain('PostgreSQL');
+    expect(markup).toContain('Beginner');
+    expect(markup).toContain('Socket.io');
+    expect(markup).toContain('MongoDB');
+    expect(markup).toContain('<svg');
+  });
+
+  it('highlights built in the projects heading without the old eyebrow or tagline', () => {
+    const markup = renderToStaticMarkup(<PortfolioHeader />);
+
+    expect(markup).toContain('A few things I’ve <span>built</span>.');
+    expect(markup).not.toContain('SELECTED WORK');
+    expect(markup).not.toContain('Projects shaped by curiosity');
   });
 
   it('renders an editable 3D showcase placeholder instead of the selected-work card', () => {
@@ -89,6 +125,8 @@ describe('portfolio screens', () => {
     expect(markup).toContain('experience-card-rail');
     expect(markup).toContain('experience-company-mark">C');
     expect(markup).toContain('experience-rail-line');
+    expect(markup).not.toContain('experience-count');
+    expect(markup).toContain('Resolving production issues');
   });
 
   it('keeps social profiles out of the contact details panel', () => {

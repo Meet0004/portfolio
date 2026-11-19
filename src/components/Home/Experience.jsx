@@ -8,7 +8,6 @@ const Experience = () => (
           <span className="experience-eyebrow"><BriefcaseBusiness size={15} /> MAKING SYSTEMS WORK BETTER</span>
           <h2>Professional <span>Experience.</span></h2>
         </div>
-        <span className="experience-count">01 <i /> EXPERIENCE</span>
       </div>
 
       <article className="experience-card">
